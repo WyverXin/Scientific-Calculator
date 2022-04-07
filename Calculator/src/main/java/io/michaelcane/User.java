@@ -6,7 +6,7 @@ import static java.lang.Double.parseDouble;
 
 public class User {
 
-    Commands commands = new Commands();
+//    Commands commands = new Commands();
     /**
      * This is the Memory that can be Set, Recalled, and Cleared.
      */
@@ -48,6 +48,7 @@ public class User {
         try {
             isNumber = parseDouble(getInput());
         } catch (NumberFormatException e) {
+            Commands commands = new Commands();
             commands.doTheThing();
         }
     }

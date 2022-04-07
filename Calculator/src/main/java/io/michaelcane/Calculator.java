@@ -3,7 +3,7 @@ package io.michaelcane;
 
 public class Calculator {
 
-    Commands commands = new Commands();
+//    Commands commands = new Commands();
 
     /**
      * Failed to go over methods that require their return to be degrees or radians.
@@ -162,6 +162,8 @@ public class Calculator {
     }
 
     public void itsTimeForTheCalculator() {
+
+        Commands commands = new Commands();
         commands.giveCommand(Commands.Command.COSINE);
         commands.doTheThing();
     }
