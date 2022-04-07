@@ -13,10 +13,15 @@ pipeline {
         }
 
         stage('compile & build project') {
-            
             steps {
                 // create .jar file in the target fodler
                 sh 'mvn -f ./Calculator/pom.xml package'
+            }
+        }
+
+        stage('unit tests'){
+            steps{
+                sh 'mvn -f ./Calculator/pom.xml test'
             }
         }
 
@@ -32,7 +37,7 @@ pipeline {
     }
     post{
         success{
-            archiveArtifacts 'target/*.jar'
+            archiveArtifacts 'Calculator/target/*.jar'
         }
         failure{
             echo '=========================='
