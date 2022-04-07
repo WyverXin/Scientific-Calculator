@@ -12,10 +12,11 @@ pipeline {
             }
         }
 
-        stage('compile project') {
-            steps {
+        stage('compile & build project') {
             
-                sh 'mvn -f ./Calculator/pom.xml install'
+            steps {
+                // create .jar file in the target fodler
+                sh 'mvn -f ./Calculator/pom.xml package'
             }
         }
 
