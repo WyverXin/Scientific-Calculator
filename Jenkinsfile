@@ -3,29 +3,26 @@ pipeline {
     stages{
         stage('clean up') {
             steps {
-                withMaven {
-                    sh './mvnw clean'
-                }
+                sh 'mvn clean'
             }
         }
 
         stage('compile project') {
             steps {
-                withMaven {
-                    sh './mvnw install'
-                }
+            
+                sh 'mvn install'
             }
         }
 
-        stage('SonarQube analyize') {
-            steps {
-                withSonarQubeEnv('YuxinsSonar') {
-                    withMaven {
-                        sh './mvnw sonar:sonar'
-                    }
-                }
-            }
-        }
+        // stage('SonarQube analyize') {
+        //     steps {
+        //         withSonarQubeEnv('YuxinsSonar') {
+        //             withMaven {
+        //                 sh './mvnw sonar:sonar'
+        //             }
+        //         }
+        //     }
+        // }
     }
     post{
         success{
