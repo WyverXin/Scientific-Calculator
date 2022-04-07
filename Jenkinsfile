@@ -8,14 +8,14 @@ pipeline {
     stages{
         stage('clean up') {
             steps {
-                sh 'mvn clean'
+                sh 'mvn -f ./Calculator/pom.xml clean'
             }
         }
 
         stage('compile project') {
             steps {
             
-                sh 'mvn install'
+                sh 'mvn -f ./Calculator/pom.xml install'
             }
         }
 
