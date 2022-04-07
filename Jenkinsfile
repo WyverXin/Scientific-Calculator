@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    tools{
+        maven "M3"
+    }
+
     stages{
         stage('clean up') {
             steps {
