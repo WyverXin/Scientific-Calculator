@@ -1,13 +1,14 @@
 pipeline {
     agent any
-
+    // Build with the Maven tool we set up in the Jenkins 
     tools{
         maven "Maven_3"
     }
-
+    // Clain Stages in the pipeline
     stages{
         stage('clean up') {
             steps {
+                // clean up the bianry files existed
                 sh 'mvn -f ./Calculator/pom.xml clean'
             }
         }
@@ -21,7 +22,17 @@ pipeline {
 
         stage('unit tests'){
             steps{
+                // run unit tests
                 sh 'mvn -f ./Calculator/pom.xml test'
+            }
+        }
+
+        stage('SonarQube analyize') {
+            steps {
+            sh 'mvn -f ./Calculator/pom.xml clean verify sonar:sonar \
+            -Dsonar.projectKey=QM_HW3_Scientific_Calculator \
+            -Dsonar.host.url=http://192.168.56.21:9000 \
+            -Dsonar.login=3d8fab59134d384be0a0d2fa42e6f599478e453f'
             }
         }
 
