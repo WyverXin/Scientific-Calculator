@@ -25,14 +25,14 @@ pipeline {
             }
         }
 
-        stage('SonarQube analyize') {
-            steps {
-                sh 'mvn -f ./Calculator/pom.xml clean verify sonar:sonar \
-                    -Dsonar.projectKey=demo \
-                    -Dsonar.host.url=http://192.168.56.21:9000 \
-                    -Dsonar.login=6aaabd1f3e402b0b4e76801a7b7f54e01d004e2f'
-            }
-        }
+        // stage('SonarQube analyize') {
+        //     steps {
+        //         sh 'mvn -f ./Calculator/pom.xml clean verify sonar:sonar \
+        //             -Dsonar.projectKey=demo \
+        //             -Dsonar.host.url=http://192.168.56.21:9000 \
+        //             -Dsonar.login=6aaabd1f3e402b0b4e76801a7b7f54e01d004e2f'
+        //     }
+        // }
     }
     post{
         success{
