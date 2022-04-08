@@ -214,33 +214,4 @@ public class CalculatorSpec {
         double actualValue = calculator.inverseLogarithm(9);
         assertEquals("This should evaluate to 1000000000", expectedValue, actualValue, delta);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

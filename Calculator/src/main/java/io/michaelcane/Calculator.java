@@ -162,7 +162,6 @@ public class Calculator {
     }
 
     public void itsTimeForTheCalculator() {
-
         Commands commands = new Commands();
         commands.giveCommand(Commands.Command.COSINE);
         commands.doTheThing();
