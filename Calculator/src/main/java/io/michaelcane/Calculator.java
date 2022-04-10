@@ -154,6 +154,19 @@ public class Calculator {
         return Math.pow(10, value1);
     }
 
+
+
+    /**
+     * Add an extra function 
+     * */
+    public static double floorModulus(double value1){
+        /**
+         * This will give the radians value from a angle value
+         * */
+        return Math.toRadians(value1);
+    }
+
+
     private void displayError() {
         /**
          * Checks if dividing by Zero
