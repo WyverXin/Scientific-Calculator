@@ -218,7 +218,7 @@ public class CalculatorSpec {
     @Test
     public void test$radiansOf() {
         /**
-         * This will give the inverse for logarithms.
+         * This will give the radians number of a angle.
          */
         double expectedValue = 0.5235987755982988;
         double actualValue = calculator.radiansOf(30);
