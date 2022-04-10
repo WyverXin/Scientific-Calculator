@@ -1,9 +1,15 @@
 pipeline {
     agent any
     // Trigger the build every 1 minute
-    triggers {
-        cron('H/3 * * * *')
+    // triggers {
+    //     cron('H/3 * * * *')
+    // }
+
+    // Trigger on new source change
+    triggers { 
+        pollSCM('H/3 * * * *')
     }
+
 
     // Build with the Maven tool we set up in the Jenkins 
     tools{
