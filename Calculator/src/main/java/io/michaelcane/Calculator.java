@@ -159,7 +159,7 @@ public class Calculator {
     /**
      * Add an extra function 
      * */
-    public static double floorModulus(double value1){
+    public static double radiansOf(double value1){
         /**
          * This will give the radians value from a angle value
          * */
