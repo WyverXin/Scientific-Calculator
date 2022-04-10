@@ -214,4 +214,14 @@ public class CalculatorSpec {
         double actualValue = calculator.inverseLogarithm(9);
         assertEquals("This should evaluate to 1000000000", expectedValue, actualValue, delta);
     }
+
+    @Test
+    public void test$radiansOf() {
+        /**
+         * This will give the inverse for logarithms.
+         */
+        double expectedValue = 0.5235987755982988;
+        double actualValue = calculator.radiansOf(30);
+        assertEquals("This should evaluate to 0.5235987755982988", expectedValue, actualValue, delta);
+    }
 }

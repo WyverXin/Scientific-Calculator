@@ -154,8 +154,6 @@ public class Calculator {
         return Math.pow(10, value1);
     }
 
-
-
     /**
      * Add an extra function 
      * */
