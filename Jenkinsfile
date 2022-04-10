@@ -2,7 +2,7 @@ pipeline {
     agent any
     // Trigger the build every 1 minute
     triggers {
-        cron('51 * * * *')
+        cron('H/3 * * * *')
     }
 
     // Build with the Maven tool we set up in the Jenkins 
